@@ -1,4 +1,4 @@
-package com.southernlinc.dictionary
+package com.example.dictionary
 
 import org.junit.Test
 
