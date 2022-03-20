@@ -3,14 +3,13 @@ package com.example.dictionary.data.local.utils
 import androidx.room.TypeConverter
 import com.example.dictionary.domain.model.Meaning
 import com.google.gson.Gson
-
 import com.google.gson.reflect.TypeToken
 import java.lang.reflect.Type
-import kotlin.collections.ArrayList
 
 
 object Converters {
     val gson = Gson()
+
     @TypeConverter
     fun fromString(value: String?): ArrayList<String?>? {
         val listType: Type = object : TypeToken<ArrayList<String?>?>() {}.type

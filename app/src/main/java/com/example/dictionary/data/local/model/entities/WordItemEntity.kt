@@ -20,16 +20,14 @@ val word: String?
 @Entity
 data class WordItemEntity(
     @PrimaryKey(autoGenerate = true)
-    val wordID: Long? = null,
+    val wordID: Int? = null,
     val phonetic: String?,
-    val sourceUrls: List<String>?,
     val word: String?,
     val meaning: List<Meaning>
 ) {
     fun toWord(): WordItem {
         return WordItem(
             word = this.word,
-            sourceUrls = this.sourceUrls,
             phonetic = this.phonetic,
             meaningList = this.meaning
         )

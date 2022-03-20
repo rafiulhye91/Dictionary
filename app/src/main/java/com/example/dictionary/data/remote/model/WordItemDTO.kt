@@ -15,11 +15,10 @@ data class WordItemDTO(
     val sourceUrls: List<String>?,
     @SerializedName("word")
     val word: String?
-){
+) {
     fun toWord(): WordItem {
         return WordItem(
             word = this.word,
-            sourceUrls = this.sourceUrls,
             phonetic = this.phonetic,
             meaningList = (this.meaningDTOS?.map { it.toMeaning() } ?: null)!!
         )
@@ -28,7 +27,6 @@ data class WordItemDTO(
     fun toWordItemEntity(): WordItemEntity {
         return WordItemEntity(
             word = this.word,
-            sourceUrls = this.sourceUrls,
             phonetic = this.phonetic,
             meaning = (this.meaningDTOS?.map { it.toMeaning() } ?: null)!!
         )

@@ -11,8 +11,9 @@ import com.example.dictionary.data.local.utils.Converters
     version = 1
 )
 @TypeConverters(Converters::class)
-abstract class DictionaryDatabase: RoomDatabase() {
+abstract class DictionaryDatabase : RoomDatabase() {
     abstract fun dictionaryDao(): DictionaryDao
+
     companion object {
         const val DATABASE_NAME = "dictionary_db"
     }

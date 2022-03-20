@@ -12,8 +12,8 @@ data class MeaningDTO(
     val partOfSpeech: String?,
     @SerializedName("synonyms")
     val synonyms: List<String>?
-){
-    fun toMeaning():Meaning{
+) {
+    fun toMeaning(): Meaning {
         return Meaning(
             partOfSpeech = this.partOfSpeech,
             antonyms = this.antonyms,
